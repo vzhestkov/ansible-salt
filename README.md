@@ -26,6 +26,16 @@ No configuration is required, the plugin utilizes the existing local salt-master
 
 Name: `suse.network.salt`
 
+## Deployment
+
+The plugins are not packaged yet, so the only way to install them now is to place the content of
+[`ansible_collections`](ansible_collections/) to `/usr/lib/python3.13/site-packages/ansible_collections/`
+on [`openSUSE Leap 16`](https://get.opensuse.org/leap/16.0/) system used with `salt-master` and `ansible` installed on it.
+
+> [!IMPORTANT]
+> PoC was tested on `openSUSE Leap 16` with the version of `salt` packages which was not yet released at the moment of testing (2025-12-01).
+> Original `salt` packages from `openSUSE Leap 16` may not function the right way due to the missing fixes for `Python 3.13`.
+
 ## Configuration
 
 Ansible requires just very siple configuration in [`/etc/ansible/ansible.cfg`](config-examples/etc/ansible/ansible.cfg)
